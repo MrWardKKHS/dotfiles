@@ -121,7 +121,7 @@ autocmd FileType html,css EmmetInstall
 let g:user_emmet_leader_key=','
 
 let g:user_emmet_settings = {
-\  'variables': {'lang': 'ja'},
+\  'variables': {'lang': 'en'},
 \  'html': {
 \    'default_attributes': {
 \      'option': {'value': v:null},
