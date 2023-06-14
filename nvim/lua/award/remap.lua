@@ -35,3 +35,15 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+
+-- [r]un file
+-- vim.keymap.set("n", '<leader>r', function()
+--        vim.cmd('exec winheight(0)/4."split"')
+
+--        if &filetype ==# 'python'
+--                vim.cmd("terminal python '%'")
+--        endif
+--        if &filetype ==# 'javascript'
+--                terminal node '%'
+--        endif]])
+--end)

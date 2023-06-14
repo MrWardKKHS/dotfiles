@@ -38,10 +38,8 @@ npm i -g live-server
 
 # Todo
 - [ ] Update install instructions with 
-    - scoop
-    - Lsp
     - ripgrep
-    - ...
+
 - [ ] add emoji replacements
 - [ ] create ColorMyPencils() equivalent for projecting
 - [ ] Import remaps

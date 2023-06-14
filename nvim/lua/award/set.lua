@@ -29,3 +29,8 @@ vim.opt.updatetime = 50
 --vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+
+
+-- Emoji
+vim.cmd('ab :tick: ✅')
+vim.cmd('ab :cross: ❌')
