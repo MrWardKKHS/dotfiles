@@ -1,10 +1,36 @@
 # Dotfiles for Mr Ward's config
 
-To make a hardlink in Powershell:
+## clone repo to $HOME
+```Powershell
+git clone https://github.com/mrwardkkhs/dotfiles
+```
+
+## install Packer
+```powershell
+git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
+```
+
+## Make a symlink between repo and settings in Powershell:
 e.g. between init.vim files
 ```Powershell
-New-Item -ItemType HardLink -Path "~\AppData\Local\nvim\init.vim" -Target "~\dotfiles\init.vim"
+New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim  -Target ~\dotfiles\nvim\
 ```
+
+## Download scoop
+```Powershell
+irm get.scoop.sh | iex
+```
+
+## Install Zig
+```
+scoop install zig
+```
+
+## open nvim and run 
+```vim
+:PackerSync
+```
+
 
 # Useful additions
 
