@@ -32,6 +32,7 @@
     "copyFormatting": "none",
     "copyOnSelect": false,
     "defaultProfile": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
+    "firstWindowPreference": "persistedWindowLayout",
     "newTabMenu": 
     [
         {
@@ -40,7 +41,11 @@
     ],
     "profiles": 
     {
-        "defaults": {},
+        "defaults": 
+        {
+            "backgroundImage": "C:\\Users\\Mr Ward\\terminal_backgrounds\\current.jpg",
+            "backgroundImageOpacity": 0.4
+        },
         "list": 
         [
             {

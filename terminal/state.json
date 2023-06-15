@@ -3,5 +3,28 @@
 	[
 		"setAsDefault"
 	],
-	"settingsHash" : "9fbf880227385f60-01d99f2cc68f368c"
+	"persistedWindowLayouts" : 
+	[
+		{
+			"initialPosition" : "0,-8",
+			"initialSize" : 
+			{
+				"height" : 828.0,
+				"width" : 1600.0
+			},
+			"launchMode" : "default",
+			"tabLayout" : 
+			[
+				{
+					"action" : "newTab",
+					"commandline" : "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+					"profile" : "Windows PowerShell",
+					"startingDirectory" : "C:\\Users\\Mr Ward",
+					"suppressApplicationTitle" : false,
+					"tabTitle" : "Windows PowerShell"
+				}
+			]
+		}
+	],
+	"settingsHash" : "6801d93f39589046-01d99f2f113d63e5"
 }
