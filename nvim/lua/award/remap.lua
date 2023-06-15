@@ -35,6 +35,12 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
+-- go to settings
+vim.keymap.set("n", "<C-s>", [[:e<space>$MYVIMRC<CR>:Ex<CR>j]])
+
+-- marking work [m]ark [a][b][c]
+-- vim.keymap.set("n", "<leader>ma", )
+-- vim.keymap.set("n", "<leader>ma", ) consider using "%p to find the current file
 
 -- [r]un file
 -- vim.keymap.set("n", '<leader>r', function()

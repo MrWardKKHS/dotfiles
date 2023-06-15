@@ -35,14 +35,6 @@ scoop install zig
 
 npm i -g live-server
 
-## sync terminal settings
-```powershell
-Remove-Item -Path $Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState -Force -Recurse
-```
-
-```powershell
-New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "~\dotfiles\terminal\"
-```
 
 # Todo
 - [ ] Update install instructions with 

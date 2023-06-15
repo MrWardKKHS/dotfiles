@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     })
+    use({'agude/vim-eldar', as = 'eldar'})
 
 
     use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
