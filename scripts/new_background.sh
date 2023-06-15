@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # The directory that contains the jpg files
-dir_path="terminal_backgrounds"
+dir_path="C:\\terminal_backgrounds"
 
-cd ~
 # Move to the directory
 cd "$dir_path"
 #!/bin/bash
