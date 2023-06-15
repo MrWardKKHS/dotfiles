@@ -2,7 +2,7 @@
 
 ## clone repo to $HOME
 ```Powershell
-git clone https://github.com/mrwardkkhs/dotfiles
+cd ~ && git clone https://github.com/mrwardkkhs/dotfiles
 ```
 
 ## install Packer
@@ -10,7 +10,7 @@ git clone https://github.com/mrwardkkhs/dotfiles
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 
-## Make a symlink between repo and settings in Powershell:
+## Make a symlink between repo and nvim settings in Powershell:
 e.g. between init.vim files
 ```Powershell
 New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim  -Target ~\dotfiles\nvim\
@@ -22,7 +22,7 @@ irm get.scoop.sh | iex
 ```
 
 ## Install Zig
-```
+```powershell
 scoop install zig
 ```
 
@@ -31,26 +31,32 @@ scoop install zig
 :PackerSync
 ```
 
-
 # Useful additions
 
 npm i -g live-server
+
+## sync terminal settings
+```powershell
+Remove-Item -Path $Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState -Force -Recurse
+```
+
+```powershell
+New-Item -ItemType SymbolicLink -Path "$Env:LocalAppData\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState" -Target "~\dotfiles\terminal\"
+```
 
 # Todo
 - [ ] Update install instructions with 
     - ripgrep
 
-- [ ] add emoji replacements
+- [x] add emoji replacements
 - [ ] create ColorMyPencils() equivalent for projecting
-- [ ] Import remaps
+- [x] Import remaps
     - runscript
     - jump to settings
-- [ ] Code completion COC as LSP?
-- [ ] Bring in other Plugs
+- [x] Bring in other Plugs
     - vim-unimpaired
     - emmet
     - vim-be-good
 - [ ] create keybidings for marking work
     - Mark as correct
     - Mark as needs improvement
-    - Jump to next repo 
