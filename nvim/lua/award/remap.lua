@@ -3,6 +3,9 @@ vim.g.mapleader = " "
 -- jump to explore
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- remap visual block to avoid terminal's <C-v> as paste
+vim.keymap.set("n", "<leader>v", '<C-v>')
+
 -- Move highlighted lines up and down
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
@@ -36,7 +39,7 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 -- go to settings
-vim.keymap.set("n", "<C-s>", [[:e<space>$MYVIMRC<CR>:Ex<CR>j]])
+vim.keymap.set("n", "<C-s>", [[:vsplit<space>$MYVIMRC<CR>:Ex<CR>j]])
 
 -- marking work [m]ark [a][b][c]
 -- vim.keymap.set("n", "<leader>ma", )
