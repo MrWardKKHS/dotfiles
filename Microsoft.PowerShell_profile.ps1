@@ -3,6 +3,7 @@ $beginningPython = '~\dev\dtc-2023\year-11-beginning-python'
 $dtc = '~\dev\dtc-2023'
 $dot = '~\dotfiles\'
 function notes {start obsidian://open?vault=Department%20Planning}
+function obsidian([string]$vault)  {start obsidian://open?vault=$vault}
 function pull-all-repos {bash ~/dotfiles/scripts/pull-all-repos.sh}
 function push-all-repos {bash ~/dotfiles/scripts/pull-all-repos.sh}
 function clone-all-repos {bash ~/dotfiles/scripts/clone-all-repos.sh}
