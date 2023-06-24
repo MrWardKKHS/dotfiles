@@ -16,19 +16,29 @@ e.g. between init.vim files
 New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim  -Target ~\dotfiles\nvim\
 ```
 
+## Hardlink terminal profiles
+```powershell
+rm $profile; New-Item -ItemType Hardlink -Path $profile  -Target ~\dotfiles\Microsoft.PowerShell_profile.ps1
+```
+
 ## Download scoop
 ```Powershell
 irm get.scoop.sh | iex
 ```
 
-## Install Zig
+## Install Zig and ripgrep
 ```powershell
-scoop install zig
+scoop install zig ripgrep
 ```
 
 ## open nvim and run 
 ```vim
 :PackerSync
+```
+
+## install pyright
+```vim
+:CocInstall coc-pyright
 ```
 
 # Useful additions
@@ -41,7 +51,7 @@ npm i -g live-server
     - ripgrep
 
 - [x] add emoji replacements
-- [ ] create ColorMyPencils() equivalent for projecting
+- [x] create ColorMyPencils() equivalent for projecting
 - [x] Import remaps
     - runscript
     - jump to settings

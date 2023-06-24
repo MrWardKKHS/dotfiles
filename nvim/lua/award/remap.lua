@@ -13,6 +13,9 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 -- keep cursor at beginning with J
 vim.keymap.set("n", "J", "mzJ`z")
 
+-- ignore type issues pyright
+vim.keymap.set("n", "<leader>i", "A # pyright: ignore<Esc>")
+
 -- keep cursor in the middle 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
