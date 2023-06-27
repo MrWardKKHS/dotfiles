@@ -2,7 +2,7 @@
 
 ## clone repo to $HOME
 ```Powershell
-cd ~ && git clone https://github.com/mrwardkkhs/dotfiles
+cd ~; git clone https://github.com/mrwardkkhs/dotfiles
 ```
 
 ## install Packer
