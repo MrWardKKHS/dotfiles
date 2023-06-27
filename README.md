@@ -28,7 +28,7 @@ irm get.scoop.sh | iex
 
 ## Install Zig and ripgrep
 ```powershell
-scoop install zig ripgrep
+scoop install zig ripgrep; scoop bucket add main; scoop install neovim
 ```
 
 ## open nvim and run 
@@ -47,7 +47,7 @@ npm i -g live-server
 
 
 # Todo
-- [ ] Update install instructions with 
+- [x] Update install instructions with 
     - ripgrep
 
 - [x] add emoji replacements
