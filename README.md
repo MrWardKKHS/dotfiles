@@ -45,6 +45,13 @@ scoop install zig ripgrep; scoop bucket add main; scoop install neovim
 
 npm i -g live-server
 
+gh cli for gihub classroom
+```
+scoop bucket add github-gh https://github.com/cli/scoop-gh.git
+scoop install gh
+gh extension install github/gh-classroom
+```
+
 
 # Todo
 - [x] Update install instructions with 
