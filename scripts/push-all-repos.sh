@@ -2,8 +2,8 @@
 
 task() {
     cd "$d"  
-    git add .
-    git commit -m "Feedback in comments"
+    git add . 
+    git commit -m "Feedback in comments" 
     git push origin tumu || git push origin master 
     cd ..
 }

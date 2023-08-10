@@ -20,6 +20,12 @@ require('code_runner').setup({
         description = "Basic pymunk space shooter",
         file_name = "main.py",
       },
+      ["~/dev/auto_spider"] = {
+        name = "Auto Spider",
+        description = "Auto mark absences",
+        file_name = "absence_review.py",
+      },
+
   },
 })
 

@@ -2,7 +2,8 @@
 
 task() {
     cd "$1"  
-    git stash
+    git add . 
+    git stash -q
     git pull
     cd ..
 }
