@@ -14,6 +14,7 @@ An xlsx is produced showing student progress.
 import pandas as pd
 import os
 import glob
+import re
 
 repos = glob.glob('./*beginning-python-*/')
 
@@ -22,12 +23,15 @@ def get_python_filepaths_in_repo(repo: str):
     Return the paths to each of the exercises
     Ignore the test scripts
     """
+    reg = re.compile(r'e\dp\d\.py')
     res = {'files':[], 'file_dirs': []} 
     for root, dirs, files in os.walk(repo):
+        _files = [file for file in files if re.match()]
         for file in files:
+            
             if 'test_e' in file:
                 continue
-            if file.endswith(".py") and file.startswith('e') and file[1] in '123456789':
+            if :
                 res['file_dirs'].append(os.path.join(root, file))
                 res['files'].append(file)
     return res

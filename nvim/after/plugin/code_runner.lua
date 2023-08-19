@@ -13,6 +13,10 @@ require('code_runner').setup({
             vim.cmd('startinsert')
         return "cd $dir && node $fileName"
     end,
+    c = function()
+        vim.cmd('startinsert')
+        return "cd $dir && gcc $fileName && a.exe"
+    end,
   },
   project = {
       ["~/teaching_examples/space_pymunk"] = {
