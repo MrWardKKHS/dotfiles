@@ -14,7 +14,10 @@ function markdown([string]$file) {python -m rich.markdown $file}
 function update-beginning-python-repos {
     cd $beginningPython; 
     pull-all-repos; 
-    python update_student_tracking.py;
+    $dir = $pwd
+    cd $dotfiles/scripts
+    python update_student_tracking.py $dir;
+    cd $beginningPython; 
     ./student_tracking.xlsx;
 }
 function scifair {

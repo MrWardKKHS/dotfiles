@@ -15,25 +15,28 @@ import pandas as pd
 import os
 import glob
 import re
+import sys
 
-repos = glob.glob('./*beginning-python-*/')
+dir = sys.argv[1]
+repos = glob.glob(f'{dir}*/10DTC-beginning-python-*/')
+columns = ['Handle']
 
 def get_python_filepaths_in_repo(repo: str):
     """
     Return the paths to each of the exercises
     Ignore the test scripts
     """
-    reg = re.compile(r'e\dp\d\.py')
+    reg = re.compile(r'e\d*p\d*.py')
     res = {'files':[], 'file_dirs': []} 
     for root, dirs, files in os.walk(repo):
-        _files = [file for file in files if re.match()]
         for file in files:
-            
             if 'test_e' in file:
                 continue
-            if :
+            if re.match(r'^e\d*p\d*.py', file):
                 res['file_dirs'].append(os.path.join(root, file))
                 res['files'].append(file)
+                if len(res['file_dirs']) >= 51:
+                   return res
     return res
 
 
@@ -70,6 +73,10 @@ def get_data():
         # Put the student handle in the left most column
         res = [handle]
         for file in files:
+            filename = file.split('\\')[-1]
+            if filename not in columns:
+                print(filename, "not in columns")
+                continue
             mark = get_mark_from_file(file)
             res.append(mark)
         data.append(res)
@@ -77,8 +84,7 @@ def get_data():
     return data
 
 
-columns = ['Handle']
-first_repo = repos[0]
+first_repo = repos[1]
 res = get_python_filepaths_in_repo(first_repo)
 files = res['files']
 columns.extend(files)
@@ -87,7 +93,7 @@ data = get_data()
 df = pd.DataFrame(data=data, columns=columns)
 
 try:
-    df.to_excel('student_tracking.xlsx') 
+    df.to_excel(f'{dir}/student_tracking.xlsx') 
 except:
     print("please close excell and try again")
     input("press enter to continue")
