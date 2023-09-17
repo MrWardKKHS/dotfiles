@@ -36,3 +36,5 @@ require'nvim-treesitter.configs'.setup {
     additional_vim_regex_highlighting = { "markdown" },
   },
 }
+
+require 'nvim-treesitter.install'.compilers = { "zig"}

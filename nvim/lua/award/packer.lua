@@ -24,7 +24,7 @@ return require('packer').startup(function(use)
             vim.cmd('colorscheme rose-pine')
         end
     })
-    use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
+    --use {'morhetz/gruvbox', config = function() vim.cmd.colorscheme("gruvbox") end }
     use({'agude/vim-eldar', as = 'eldar'})
 
     use('nvim-treesitter/nvim-treesitter', {run= ':TSUpdate'})
@@ -33,16 +33,16 @@ return require('packer').startup(function(use)
     use('tpope/vim-fugitive')
     use('CRAG666/code_runner.nvim')
     use{'neoclide/coc.nvim', branch = 'release'}
-    use({
-      "epwalsh/obsidian.nvim",
-      requires = {
+    --use({
+      --"epwalsh/obsidian.nvim",
+      --requires = {
         -- Required.
-        "nvim-lua/plenary.nvim",
-      },
-      config = function()
-        require("obsidian").setup({
-          dir = "~/obsidian/Department Planning",
-        })
-      end,
-    })
+     --   "nvim-lua/plenary.nvim",
+      --},
+      --config = function()
+       -- require("obsidian").setup({
+        --  dir = "~/obsidian/Department Planning",
+       -- })
+      --end,
+    --})
 end)
