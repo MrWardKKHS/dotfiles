@@ -15,7 +15,7 @@ require('code_runner').setup({
     end,
     c = function()
         vim.cmd('startinsert')
-        return "cd $dir && gcc $fileName && a.exe"
+        return "cd $dir && zig cc $fileName -o a.exe --target=x86_64-windows-msvc && a.exe"
     end,
   },
   project = {
