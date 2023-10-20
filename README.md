@@ -1,40 +1,38 @@
 # Dotfiles for Mr Ward's config
 
-> These instructions assume a full set up of a new computer
+> These instructions assume a full set up of a new mac computer
+> To see windows set up use `git checkout tumu`
 
-# Ensure latest version of powershell is installed 
-```powershell
-winget install Microsoft.PowerShell
+## Download Homebrew
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-## Download scoop
-```Powershell
-irm get.scoop.sh | iex
-```
-
-## Install Zig and ripgrep
-```powershell
-scoop install zig ripgrep neovim git
+## Install Zig and ripgrep neovim git
+```bash
+brew install zig ripgrep neovim git
 ```
 
 ## clone repo to $HOME
-```Powershell
-cd ~; git clone https://github.com/mrwardkkhs/dotfiles
+```bash
+cd ~ && git clone https://github.com/mrwardkkhs/dotfiles
 ```
 
 ## install Packer
-```powershell
+```bash
 git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data\site\pack\packer\start\packer.nvim"
 ```
 
+# Todo make sure mac nvim install location is right
 ## Make a symlink between repo and nvim settings in Powershell:
 e.g. between init.vim files
-```Powershell
+```bash
 New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim  -Target ~\dotfiles\nvim\
 ```
 
 ## Hardlink terminal profiles
-```powershell
+(not yet converted)
+```bash
 rm $profile; New-Item -ItemType Hardlink -Path $profile  -Target ~\dotfiles\Microsoft.PowerShell_profile.ps1
 ```
 
@@ -48,12 +46,17 @@ rm $profile; New-Item -ItemType Hardlink -Path $profile  -Target ~\dotfiles\Micr
 :CocInstall coc-pyright
 ```
 
-
-# Extras with scoop
-```powershell
-scoop bucket add extras
-scoop install windows-terminal blender firefox posh-git nodejs vscode obsidian obs-studio tiled discord ffmpeg 7zip steam
+## install Oh my zsh
+```bash
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
+
+# Extras with Homebrew
+```bash
+brew install --cask blender firefox node visual-studio-code obsidian obs discord steam
+brew install ffmpeg 7zip
+```
+
 # Useful additions
 live server
 ```
@@ -62,23 +65,11 @@ npm i -g live-server
 
 gh cli for gihub classroom
 ```
-scoop bucket add github-gh https://github.com/cli/scoop-gh.git
-scoop install gh
+brew install gh
 gh extension install github/gh-classroom
 ```
-# Todo
-- [x] Update install instructions with 
-    - ripgrep
 
-- [x] add emoji replacements
-- [x] create ColorMyPencils() equivalent for projecting
-- [x] Import remaps
-    - runscript
-    - jump to settings
-- [x] Bring in other Plugs
-    - vim-unimpaired
-    - emmet
-    - vim-be-good
-- [ ] create keybidings for marking work
-    - Mark as correct
-    - Mark as needs improvement
+posh-git-bash
+```
+https://github.com/lyze/posh-git-sh
+```
