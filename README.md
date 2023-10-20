@@ -73,3 +73,8 @@ posh-git-bash
 ```
 https://github.com/lyze/posh-git-sh
 ```
+
+# TODO:
+- Finish hardlinking profiles
+- python
+- Change C complie command in code runner and target architecture
