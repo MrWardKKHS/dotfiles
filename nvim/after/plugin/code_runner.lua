@@ -3,7 +3,7 @@ require('code_runner').setup({
     python = function()
             vim.cmd('startinsert')
         -- return "cd $dir && python $fileName"
-        return "cd $dir && python main.py"
+        return "cd $dir && python3 main.py"
     end,
     typescript = function()
             vim.cmd('startinsert')
@@ -15,7 +15,7 @@ require('code_runner').setup({
     end,
     c = function()
         vim.cmd('startinsert')
-        return "cd $dir && gcc -o a $fileName && a.exe"
+        return "cd $dir && gcc -o a $fileName && ./a"
     end,
   },
   project = {

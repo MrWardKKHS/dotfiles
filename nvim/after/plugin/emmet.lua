@@ -1,6 +1,5 @@
 vim.cmd('let g:user_emmet_install_global = 0')
 vim.cmd('autocmd FileType html,css EmmetInstall')
-
 vim.cmd("let g:user_emmet_leader_key=','")
 
 vim.cmd([[let g:user_emmet_settings = {
