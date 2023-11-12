@@ -17,6 +17,7 @@ require('code_runner').setup({
         vim.cmd('startinsert')
         return "cd $dir && gcc -o a $fileName && ./a"
     end,
+    applescript = {"osascript $fileName"}
   },
   project = {
       ["~/teaching_examples/space_pymunk"] = {

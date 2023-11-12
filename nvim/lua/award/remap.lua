@@ -4,6 +4,9 @@ vim.g.user_emmet_leader_key = ","
 -- jump to explore
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
+-- redo 
+vim.keymap.set("n", "U", "<C-r>")
+
 -- remap visual block to avoid terminal's <C-v> as paste
 vim.keymap.set("n", "<leader>v", '<C-v>')
 
