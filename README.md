@@ -24,7 +24,7 @@ git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data
 ```
 
 # Todo make sure mac nvim install location is right
-## Make a symlink between repo and nvim settings in Powershell:
+## Make a symlink between repo and nvim settings in bash:
 e.g. between init.vim files
 ```bash
 New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim  -Target ~\dotfiles\nvim\
@@ -53,8 +53,7 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 # Extras with Homebrew
 ```bash
-brew install --cask blender firefox node visual-studio-code obsidian obs discord steam
-brew install ffmpeg 7zip
+brew bundle install --file ~/dotfiles/Brewfile
 ```
 
 # Useful additions
