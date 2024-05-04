@@ -10,6 +10,7 @@ return require('packer').startup(function(use)
     use 'tpope/vim-unimpaired'
     use 'mattn/emmet-vim'
     use 'ThePrimeagen/vim-be-good'
+    use 'andymass/vim-matchup'
 
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.1',

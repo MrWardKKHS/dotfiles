@@ -17,6 +17,10 @@ require('code_runner').setup({
         vim.cmd('startinsert')
         return "cd $dir && gcc -o a $fileName && ./a"
     end,
+    svelte = function()
+        vim.cmd('startinsert')
+        return "cd $dir && npm run build && npm run preview"
+    end,
     applescript = {"osascript $fileName"}
   },
   project = {

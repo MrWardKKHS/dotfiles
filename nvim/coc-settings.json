@@ -1,3 +1,4 @@
 {
-    "pyright.inlayHints.enable": false
+    "pyright.inlayHints.enable": false,
+    "svelte.enable-ts-plugin": true
 }
