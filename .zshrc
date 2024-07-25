@@ -12,7 +12,7 @@ alias :q=exit
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-export PATH=/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+export PATH="/opt/homebrew/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 export PATH="$HOME/.cargo/bin:$PATH"
@@ -82,7 +82,10 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -124,3 +127,24 @@ tab() {
       end tell
 EOF
 }
+export PATH="/Users/alexward/Library/Python/3.12/bin:$PATH"
+schoolwork='/Users/alexward/schoolwork'
+dotfiles='/Users/alexward/dotfiles'
+update_student_tracking='/Users/alexward/dotfiles/scripts/update_student_tracking.py'
+notes() {start obsidian://open?vault=Department%20Planning}
+pull-all-repos(){bash ~/dotfiles/scripts/pull-all-repos.sh;}
+push-all-repos(){bash ~/dotfiles/scripts/push-all-repos.sh;}
+clone-all-repos(){bash ~/dotfiles/scripts/clone-all-repos.sh;}
+
+update-beginning-python-repos(){
+    pushd
+    cd $schoolwork
+    source .venv/bin/activate
+    cd 10s
+    pull-all-repos 
+    python $update_student_tracking $(pwd)
+    open ./student_tracking.csv
+    deactivate
+    popd
+}
+
