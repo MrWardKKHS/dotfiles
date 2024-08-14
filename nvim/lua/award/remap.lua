@@ -64,3 +64,20 @@ vim.keymap.set("n", "<C-s>", [[:vsplit<space>$MYVIMRC<CR>:Ex<CR>j]])
 --        endif]])
 --end)
 
+-- turn off inlay hints
+vim.keymap.set("n", "<leader>h", [[:CocCommand document.toggleInlayHint<CR>]])
+
+-- See blame
+vim.keymap.set("n", "<leader>b", [[:Git blame<CR><C-w>w]])
+
+-- marking beginning python repos
+-- Get all python files with a comment other than Well done! [f]ix
+vim.keymap.set("n", "<leader>mf", [[:grep "(?!\# Well done!$)(^$\|\# )" --pcre2 ~/schoolwork/**/beginning-python-**/**/*.py]])
+
+-- get all py files without a comment or triple quotes [n]ew
+-- vim.keymap.set("n", "<leader>mn", [[:grep ".*(?<!\"\"\")\z" --pcre2 ~/schoolwork/**/beginning-python-**/**/*.py]])])
+-- :grep "^(?:[^\"]*[\"]){6}[^\"](?:(?!# )(.|\n))*$" --pcre2 ~/schoolwork/**/beginning-python-**/**/*.py
+
+-- mark as good, move on to next file. 
+vim.keymap.set("n", "<leader>j", "Go<CR># Well done!<Esc>:w<CR>:next<CR>")
+

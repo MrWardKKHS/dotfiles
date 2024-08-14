@@ -2,8 +2,8 @@ require('code_runner').setup({
   filetype = {
     python = function()
             vim.cmd('startinsert')
-        -- return "cd $dir && python $fileName"
-        return "cd $dir && python3 main.py"
+        return "cd $dir && python3 $fileName"
+        -- return "cd $dir && python3 main.py"
     end,
     typescript = function()
             vim.cmd('startinsert')
@@ -39,9 +39,9 @@ require('code_runner').setup({
 })
 
 vim.keymap.set('n', '<leader>r', ':RunCode<CR>', { noremap = true, silent = false })
-vim.keymap.set('n', '<leader>Rf', ':RunFile<CR>', { noremap = true, silent = false })
+vim.keymap.set('n', '<leader>R', ':RunFile<CR>', { noremap = true, silent = false })
 -- vim.keymap.set('n', '<leader>RR', ':RunFile tab<CR>', { noremap = true, silent = false })
-vim.keymap.set('n', '<leader>R', ':RunProject<CR>', { noremap = true, silent = false })
+-- vim.keymap.set('n', '<leader>R', ':RunProject<CR>', { noremap = true, silent = false })
 -- vim.keymap.set('n', '<leader>Rc', ':RunClose<CR>', { noremap = true, silent = false })
 -- vim.keymap.set('n', '<leader>crf', ':CRFiletype<CR>', { noremap = true, silent = false })
 -- vim.keymap.set('n', '<leader>crp', ':CRProjects<CR>', { noremap = true, silent = false })

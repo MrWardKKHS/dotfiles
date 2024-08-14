@@ -72,6 +72,8 @@ def get_data():
     data = []
     for repo in repos:
         handle = repo.split('beginning-python-')[-1].replace('/', '')
+        # fix 9s issue
+        handle = handle.replace("9s-", "")
         files = get_python_filepaths_in_repo(repo)['file_dirs']
         # Put the student handle in the left most column
         res = [handle]
