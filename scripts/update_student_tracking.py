@@ -16,12 +16,13 @@ import os
 import glob
 import re
 import sys
+from pathlib import Path
 
 dir = sys.argv[1]
 print('Making csv')
-print("^^^", dir)
 repos = glob.glob(f'{dir}*/*beginning-python-*/')
 columns = ['Handle']
+
 
 def get_python_filepaths_in_repo(repo: str):
     """
@@ -31,9 +32,7 @@ def get_python_filepaths_in_repo(repo: str):
     reg = re.compile(r'e\d*p\d*.py')
     res = {'files':[], 'file_dirs': []} 
     for root, dirs, files in os.walk(repo):
-        print(files)
         for file in files:
-            print(file)
             if re.match(r'e\d*p\d*\.py', file):
                 res['file_dirs'].append(os.path.join(root, file))
                 res['files'].append(file)
@@ -56,16 +55,26 @@ def get_mark_from_file(file_dir):
         while not last_line.strip():
             index -= 1
             last_line = lines[index]
-        print(f'{last_line=}')
 
         if '"""' in last_line:
-            return ' '
+            return ''
         elif '# Good work!' in last_line or '# Well done!' in last_line:
-            return '✅'
+            return 'Y'
         elif '#' in last_line:
-            return '❌'
+            return 'X'
         
-        return '❓'
+        return '?'
+
+def get_name(repo, handle):
+    """Assumes roster_lookup.txt lives in the paren dir"""
+    with open(Path(repo).parent / "roster_lookup.txt") as file:
+        lines = file.readlines()
+        for line in lines:
+            *names, handle_lookup = line.strip().split()
+            if handle == handle_lookup:
+                return " ".join(names)
+
+
 
 def get_data():
     """Get a list of all marks in all repos for handing off to pandas"""
@@ -77,14 +86,19 @@ def get_data():
         files = get_python_filepaths_in_repo(repo)['file_dirs']
         # Put the student handle in the left most column
         res = [handle]
+        names = get_name(repo, handle)
+        *firsts, last = names.split()
         for file in sorted(files):
-            print(f'{file=}')
             filename = file.split('/')[-1]
             if filename not in columns:
                 print(filename, "not in columns")
                 continue
             mark = get_mark_from_file(file)
             res.append(mark)
+        right = res.count("Y")
+        res.append(str(right))
+        res.append(" ".join(firsts))
+        res.append(last)
         data.append(res)
     
     return data
@@ -93,8 +107,12 @@ first_repo = repos[1]
 res = get_python_filepaths_in_repo(first_repo)
 files = res['files']
 columns.extend(sorted(files))
+columns.append("right")
+columns.append("firstnames")
+columns.append("last name")
 
 data = get_data()
 df = pd.DataFrame(data=data, columns=columns)
+df = df.sort_values(by=['last name'])
 
 df.to_csv(f'{dir}/student_tracking.csv') 

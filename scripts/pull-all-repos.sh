@@ -4,7 +4,7 @@ task() {
     cd "$1"  
     git add . 
     git stash -q
-    git pull
+    git pull --rebase
     cd ..
 }
 

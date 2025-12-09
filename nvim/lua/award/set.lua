@@ -35,3 +35,6 @@ vim.g.mapleader = " "
 -- Emoji
 vim.cmd('ab :tick: ✅')
 vim.cmd('ab :cross: ❌')
+
+vim.cmd('autocmd BufNewFile,BufRead *.gs set filetype=javascript')
+vim.g.openscad_default_mappings = true

@@ -8,6 +8,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
 
     use 'tpope/vim-unimpaired'
+    use 'tpope/vim-surround'
+    use 'tpope/vim-repeat'
     use 'mattn/emmet-vim'
     use 'ThePrimeagen/vim-be-good'
     use 'andymass/vim-matchup'
@@ -46,4 +48,14 @@ return require('packer').startup(function(use)
        -- })
       --end,
     --})
+    use {
+    'salkin-mada/openscad.nvim',
+    config = function ()
+        require('openscad')
+        -- load snippets, note requires
+        vim.g.openscad_load_snippets = true
+    end,
+    requires = 'L3MON4D3/LuaSnip'
+    }
 end)
+

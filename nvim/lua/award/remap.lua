@@ -18,7 +18,7 @@ vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 vim.keymap.set("n", "J", "mzJ`z")
 
 -- ignore type issues pyright
-vim.keymap.set("n", "<leader>i", "A # pyright: ignore<Esc>")
+-- vim.keymap.set("n", "<leader>i", "A # pyright: ignore<Esc>")
 
 -- keep cursor in the middle 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -70,14 +70,11 @@ vim.keymap.set("n", "<leader>h", [[:CocCommand document.toggleInlayHint<CR>]])
 -- See blame
 vim.keymap.set("n", "<leader>b", [[:Git blame<CR><C-w>w]])
 
--- marking beginning python repos
--- Get all python files with a comment other than Well done! [f]ix
-vim.keymap.set("n", "<leader>mf", [[:grep "(?!\# Well done!$)(^$\|\# )" --pcre2 ~/schoolwork/**/beginning-python-**/**/*.py]])
-
--- get all py files without a comment or triple quotes [n]ew
--- vim.keymap.set("n", "<leader>mn", [[:grep ".*(?<!\"\"\")\z" --pcre2 ~/schoolwork/**/beginning-python-**/**/*.py]])])
--- :grep "^(?:[^\"]*[\"]){6}[^\"](?:(?!# )(.|\n))*$" --pcre2 ~/schoolwork/**/beginning-python-**/**/*.py
-
 -- mark as good, move on to next file. 
 vim.keymap.set("n", "<leader>j", "Go<CR># Well done!<Esc>:w<CR>:next<CR>")
 
+-- Testing out new workflow - gh issues
+-- add a new issue
+vim.keymap.set("n", "<leader>in", [[:terminal gh issue new -b "" -t""<Left>]])
+
+vim.keymap.set("n", "<leader>il", [[:terminal gh issue list<CR>]])

@@ -34,6 +34,12 @@ require('code_runner').setup({
         description = "Auto mark absences",
         file_name = "absence_review.py",
       },
+      ["~/dev/subject_selection"] = {
+        name = "Subject selectino",
+        description = "apps script test",
+        file_name = "Code.gs",
+          command = "clasp run"
+      },
 
   },
 })
