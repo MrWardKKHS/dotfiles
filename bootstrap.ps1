@@ -1,5 +1,8 @@
-winget install Microsoft.PowerShell
-winget install Git.Git
+winget install --id Microsoft.PowerShell -e
+winget install --id Git.Git -e
+winget install --id GitHub.cli -e
+
+gh auth login
 
 git clone https://github.com/mrwardkkhs/dotfiles $HOME\dotfiles
 
