@@ -5,8 +5,6 @@ scoop bucket add extras
 scoop bucket add versions
 scoop import ~\dotfiles\scoop.json
 
-winget import -i ~\dotfiles\winget.json
-
 Remove-Item $PROFILE -Force -ErrorAction SilentlyContinue
 New-Item -ItemType SymbolicLink -Path $PROFILE -Target ~\dotfiles\Microsoft.PowerShell_profile.ps1
 
@@ -16,3 +14,5 @@ New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim -Target ~\dotfiles\nv
 Get-Content ~\dotfiles\vscode-extensions.txt | ForEach-Object {
     code --install-extension $_
 }
+
+winget-install.ps1
