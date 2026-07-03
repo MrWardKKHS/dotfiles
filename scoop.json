@@ -1,0 +1,276 @@
+{
+    "buckets": [
+        {
+            "Name": "main",
+            "Source": "https://github.com/ScoopInstaller/Main.git",
+            "Updated": "2026-06-15T08:46:58+12:00",
+            "Manifests": 1577
+        },
+        {
+            "Name": "extras",
+            "Source": "https://github.com/ScoopInstaller/Extras",
+            "Updated": "2026-06-15T11:23:05+12:00",
+            "Manifests": 2308
+        },
+        {
+            "Name": "versions",
+            "Source": "https://github.com/ScoopInstaller/Versions",
+            "Updated": "2026-06-15T09:45:45+12:00",
+            "Manifests": 589
+        }
+    ],
+    "apps": [
+        {
+            "Updated": "2026-05-28T09:58:59.8459147+12:00",
+            "Name": "7zip",
+            "Version": "26.01",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-05-28T10:01:13.2499508+12:00",
+            "Name": "blender",
+            "Version": "5.1.2",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-05-28T10:01:17.2465386+12:00",
+            "Name": "cacert",
+            "Version": "2026-05-14",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:32:20.6652684+12:00",
+            "Name": "cloudflared",
+            "Version": "2026.6.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-05-28T10:03:02.5536086+12:00",
+            "Name": "cmake",
+            "Version": "4.3.3",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:32:31.2661357+12:00",
+            "Name": "curl",
+            "Version": "8.20.0_5",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-05-28T10:03:42.0322066+12:00",
+            "Name": "discord",
+            "Version": "1.0.9232-25",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-05-28T10:04:39.4989945+12:00",
+            "Name": "ffmpeg",
+            "Version": "8.1.1",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:32:34.9836724+12:00",
+            "Name": "gh",
+            "Version": "2.94.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-05-28T10:05:38.4846921+12:00",
+            "Name": "git",
+            "Version": "2.54.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-05-28T10:05:59.7831599+12:00",
+            "Name": "godot",
+            "Version": "4.6.3",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-05-28T10:08:51.9769263+12:00",
+            "Name": "inkscape",
+            "Version": "1.4.4",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-05-28T10:08:53.9751603+12:00",
+            "Name": "innounp",
+            "Version": "2.67.9",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:33:19.1986257+12:00",
+            "Name": "krita",
+            "Version": "5.3.2.1",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-06-15T11:34:19.1062351+12:00",
+            "Name": "musescore",
+            "Version": "4.7.3.260608135",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-06-15T11:34:48.452271+12:00",
+            "Name": "neovim",
+            "Version": "0.12.3",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:35:15.8514234+12:00",
+            "Name": "nodejs",
+            "Version": "26.3.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:37:42.7029611+12:00",
+            "Name": "obs-studio",
+            "Version": "32.1.2",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-06-15T11:38:13.2273038+12:00",
+            "Name": "obsidian",
+            "Version": "1.12.7",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-06-15T11:38:17.5575118+12:00",
+            "Name": "oh-my-posh",
+            "Version": "29.15.1",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-01-19T09:42:00.0924356+13:00",
+            "Name": "openscad",
+            "Version": "2021.01",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-06-15T11:38:42.3777811+12:00",
+            "Name": "prusaslicer",
+            "Version": "2.9.5",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-01-19T13:32:59.7180947+13:00",
+            "Name": "pwsh",
+            "Version": "7.5.4",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:38:58.3211165+12:00",
+            "Name": "raspberry-pi-imager",
+            "Version": "2.0.8",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-06-15T11:39:02.5931273+12:00",
+            "Name": "rclone",
+            "Version": "1.74.3",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:44:14.6649057+12:00",
+            "Name": "rider",
+            "Version": "2026.1.2-261.24374.190",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-01-17T19:43:42.7433863+13:00",
+            "Name": "ripgrep",
+            "Version": "15.1.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:44:47.7965898+12:00",
+            "Name": "spotify",
+            "Version": "1.2.92.147.g5b8f9367",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-01-19T09:43:06.5145401+13:00",
+            "Name": "steam",
+            "Version": "nightly-20260119",
+            "Info": "",
+            "Source": "versions"
+        },
+        {
+            "Updated": "2026-01-19T09:32:12.0891772+13:00",
+            "Name": "thonny",
+            "Version": "4.1.7",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-06-15T11:44:50.3935144+12:00",
+            "Name": "tree-sitter",
+            "Version": "0.26.9",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:45:02.202947+12:00",
+            "Name": "uv",
+            "Version": "0.11.21",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:46:28.4064534+12:00",
+            "Name": "vscode",
+            "Version": "1.124.2",
+            "Info": "",
+            "Source": "extras"
+        },
+        {
+            "Updated": "2026-01-19T09:32:34.1637668+13:00",
+            "Name": "wget",
+            "Version": "1.21.4",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:55:19.6383424+12:00",
+            "Name": "zig",
+            "Version": "0.16.0",
+            "Info": "",
+            "Source": "main"
+        },
+        {
+            "Updated": "2026-06-15T11:56:16.212271+12:00",
+            "Name": "zoom",
+            "Version": "7.0.5.38856",
+            "Info": "",
+            "Source": "extras"
+        }
+    ]
+}

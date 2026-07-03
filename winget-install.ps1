@@ -1,0 +1,13 @@
+winget install Adobe.CreativeCloud
+winget install Microsoft.Office
+winget install Google.Chrome
+winget install Google.GoogleDrive
+winget install Docker.DockerDesktop
+winget install Microsoft.WindowsTerminal
+winget install Microsoft.VisualStudio.2022.Community
+winget install Autodesk.Fusion
+winget install Wampserver.Wampserver
+winget install DBBrowserForSQLite.DBBrowserForSQLite
+winget install Anki.Anki
+winget install Makeblock.xToolStudio
+winget install Zwift.Zwift
