@@ -1,0 +1,96 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "version": 2,
+  "final_space": true,
+
+  "palette": {
+    "bg": "#1e1e2e",
+    "fg": "#cdd6f4",
+    "blue": "#89b4fa",
+    "green": "#a6e3a1",
+    "yellow": "#f9e2af",
+    "red": "#f38ba8",
+    "purple": "#cba6f7",
+    "gray": "#6c7086"
+  },
+
+  "blocks": [
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "type": "os",
+          "style": "plain",
+          "foreground": "p:gray",
+          "template": "{{ .Icon }} "
+        },
+        {
+          "type": "path",
+          "style": "plain",
+          "foreground": "p:blue",
+          "template": "{{ .Path }} ",
+          "properties": {
+            "style": "folder",
+            "home_icon": "~",
+            "folder_icon": " ",
+            "separator_icon": " / ",
+            "max_depth": 4
+          }
+        },
+        {
+          "type": "git",
+          "style": "plain",
+          "foreground": "p:purple",
+          "template": "{{ .HEAD }}{{ if .Working.Changed }}*{{ end }}{{ if .Staging.Changed }}+{{ end }} ",
+          "properties": {
+            "branch_icon": " ",
+            "commit_icon": "@",
+            "fetch_status": true
+          }
+        },
+        {
+          "type": "python",
+          "style": "plain",
+          "foreground": "p:green",
+          "template": "{{ if .Venv }}({{ .Venv }}) {{ end }}"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "type": "executiontime",
+          "style": "plain",
+          "foreground": "p:yellow",
+          "template": "{{ .FormattedMs }} ",
+          "properties": {
+            "threshold": 200
+          }
+        },
+        {
+          "type": "status",
+          "style": "plain",
+          "foreground": "p:red",
+          "template": "{{ if .Error }}✗{{ end }}"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "newline": true,
+      "segments": [
+        {
+          "type": "text",
+          "style": "plain",
+          "foreground": "p:fg",
+          "template": "❯ "
+        }
+      ]
+    }
+  ]
+}
+

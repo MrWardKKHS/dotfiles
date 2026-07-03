@@ -30,12 +30,16 @@ git clone https://github.com/wbthomason/packer.nvim "$env:LOCALAPPDATA\nvim-data
 ## Make a symlink between repo and nvim settings in Powershell:
 e.g. between init.vim files
 ```Powershell
-New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim  -Target ~\dotfiles\nvim\
+New-Item -ItemType Directory -Force ~\AppData\Local\nvim
+Remove-Item ~\AppData\Local\nvim -Recurse -Force
+New-Item -ItemType SymbolicLink -Path ~\AppData\Local\nvim -Target ~\dotfiles\nvim
 ```
 
 ## Hardlink terminal profiles
 ```powershell
-rm $profile; New-Item -ItemType Hardlink -Path $profile  -Target ~\dotfiles\Microsoft.PowerShell_profile.ps1
+New-Item -ItemType Directory -Force (Split-Path $PROFILE)
+Remove-Item $PROFILE -Force -ErrorAction SilentlyContinue
+New-Item -ItemType SymbolicLink -Path $PROFILE -Target ~\dotfiles\Microsoft.PowerShell_profile.ps1
 ```
 
 ## open nvim and run 
@@ -66,6 +70,20 @@ scoop bucket add github-gh https://github.com/cli/scoop-gh.git
 scoop install gh
 gh extension install github/gh-classroom
 ```
+
+# before changing computers
+```
+cd ~\dotfiles
+git status
+git add .
+git commit -m "Update dotfiles before computer move"
+git push
+scoop export > ~\dotfiles\scoop.json
+winget export -o ~\dotfiles\winget.json
+code --list-extensions > ~\dotfiles\vscode-extensions.txt
+```
+
+
 # Todo
 - [x] Update install instructions with 
     - ripgrep
